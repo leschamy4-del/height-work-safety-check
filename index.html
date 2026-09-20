@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
-  <meta name="description" content="登高作业安全调查与互动找茬训练">
+  <meta name="description" content="登高作业安全调查与互动找茬训练：人字梯、移动式门式脚手架">
   <title>登高作业安全调查｜互动训练</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a2342'/%3E%3Cpath d='M18 52 29 12h6l11 40M22 39h20M25 29h14M27 20h10' fill='none' stroke='%23ffd23f' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
   <style>
@@ -30,7 +30,7 @@
 </head>
 <body>
   <header class="topbar">
-    <div class="brand"><div class="badge">查</div><div><h1>登高作业安全调查｜互动训练</h1><p class="sub">当前模块：人字梯。后续可继续加入直梯、登高车、曲臂车、脚手架等设备。</p></div></div>
+    <div class="brand"><div class="badge">查</div><div><h1>登高作业安全调查｜互动训练</h1><p class="sub">当前包含：人字梯、移动式门式脚手架。后续可继续加入直梯、登高车、曲臂车等设备。</p></div></div>
     <div class="stats" aria-live="polite"><div class="stat"><strong><span id="found">0</span> / <span id="total">12</span></strong><span>已找出</span></div><div class="stat"><strong id="attempts">0</strong><span>点击次数</span></div><div class="stat"><strong id="clock">00:00</strong><span>用时</span></div></div>
   </header>
   <main>
@@ -48,7 +48,7 @@
       <button class="btn secondary" id="resetBtn" type="button">重新开始本场景</button>
       <button class="btn danger" id="teacherBtn" type="button">讲师直接揭晓</button>
     </div>
-    <p class="note">训练样品 v0.6｜第二场景为正确/错误参数混合判断；图片、参数口径与热点仍需人工校准后再进正式课件。</p>
+    <p class="note">训练样品 v0.8｜已加入移动式门式脚手架两个场景；图片、参数口径与热点仍需人工校准后再进正式课件。</p>
   </main>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <dialog id="answerDialog">
@@ -84,6 +84,34 @@
         {id:10,isError:false,x:54.7,y:7.4,lx:37,ly:13,r:6.2,label:'顶部开裂：禁止站人',title:'正确参数：顶部开裂禁止站人',desc:'顶部平台开裂并有松动螺钉，参数牌要求禁止站人，方向正确。',fix:'正确做法：平台、顶帽开裂或紧固件松动时，立即停用；顶部区域不得作为站立位置。'},
         {id:11,isError:false,x:46.4,y:82.5,lx:30,ly:72,r:6.2,label:'锈蚀铆钉：重点复检',title:'正确参数：锈蚀连接件需复检',desc:'铆钉和连接片锈蚀会影响连接强度，列为重点复检参数是正确的。',fix:'正确做法：重点检查铆钉、焊点和连接片腐蚀；严重锈蚀不得使用。'},
         {id:12,isError:false,x:68.0,y:38.0,lx:85,ly:42,r:6.2,label:'绳子绑扎：非原厂修补',title:'正确参数：绳子绑扎不是合格修复',desc:'参数牌指出绳子绑扎属于非原厂修补，没有把它当作合格修复。',fix:'正确做法：严禁用绳子、胶带、铁丝替代原厂连接件；发现即停用。'}
+      ]},
+      {id:'scaffold_setup',name:'脚手架：搭设与检查',image:'assets/移动式门式脚手架_搭设检查找茬_v0.1.png',alt:'移动式门式脚手架搭设与使用前检查找茬场景',task:'任务：找出移动式门式脚手架搭设与检查中的 12 处问题',sub:'重点看构造完整性、平台、护栏、剪刀撑、脚轮、标识和周边环境。',source:'判定口径参考：JGJ/T 128-2019《建筑施工门式钢管脚手架安全技术标准》、移动式门式脚手架常见安全检查要求及企业从严管理口径。当前为训练样品，正式教材前需结合客户标准、设备厂家说明书和现场实物再校准。',issues:[
+        {id:1,x:42,y:14,r:6,title:'上部防护栏杆不连续',desc:'平台周边护栏没有形成完整封闭防护，人员在平台边缘作业时容易从缺口处坠落。',fix:'正确做法：作业平台四周应设置完整、连续的上栏杆和中栏杆，缺失或松动时不得使用。'},
+        {id:2,x:51,y:22,r:6,title:'平台集中堆放材料',desc:'材料和工具集中放在平台一侧，会造成局部超载和重心偏移，也增加坠物风险。',fix:'正确做法：平台材料应少量、均匀、分散放置，不得超过允许施工荷载。'},
+        {id:3,x:55,y:33,r:5,title:'挡脚板缺失或不连续',desc:'平台边缘没有可靠挡脚板，工具、小件材料容易从平台边缘滑落。',fix:'正确做法：作业层边缘应设置挡脚板，并保持连续、固定牢靠。'},
+        {id:4,x:45,y:66,r:5,title:'合格/禁用状态牌缺失',desc:'架体没有清晰状态标识，现场人员无法判断是否已验收合格、是否允许使用。',fix:'正确做法：搭设完成和移动后应检查验收，挂出“可使用/禁止使用”等状态标识。'},
+        {id:5,x:49,y:63,r:6,title:'作业平台未满铺或固定不牢',desc:'平台板存在缝隙或固定不充分时，人员踩踏可能移位、翘起或踩空。',fix:'正确做法：脚手板应满铺、平整、固定牢靠，发现松动、缺板立即停用整改。'},
+        {id:6,x:63,y:48,r:6,title:'水平/竖向剪刀撑设置不足',desc:'剪刀撑不完整会降低架体整体刚度，受力或移动后容易晃动、变形。',fix:'正确做法：按方案设置水平剪刀撑和竖向剪刀撑，连接牢固，不得随意拆除。'},
+        {id:7,x:75,y:55,r:6,title:'侧面缺少连续加固杆',desc:'侧面加固杆缺失或间距过大，架体抗侧向变形能力不足。',fix:'正确做法：外侧周边和内部纵横向加固杆应连续设置，并检查扣件、插销有效。'},
+        {id:8,x:58,y:60,r:5,title:'连接件或插销未可靠锁定',desc:'连接节点未锁定会导致门架、横杆或斜撑在受力时脱开。',fix:'正确做法：逐个检查连接件、锁臂、插销和扣件，确认到位、无缺失、无松脱。'},
+        {id:9,x:48,y:90,r:5,title:'脚轮未锁定',desc:'脚轮未制动时，人员上架或平台受力后架体可能突然移动。',fix:'正确做法：使用前全部脚轮落地并锁定，确认锁定后架体不应滑动。'},
+        {id:10,x:35,y:91,r:5,title:'脚轮支承不稳',desc:'脚轮或支腿落在垫块、杂物或不平整区域上，支承点容易滑移或倾斜。',fix:'正确做法：脚轮应落在坚实、平整、无积水地面；不得用临时垫块凑合找平。'},
+        {id:11,x:50,y:45,r:7,title:'架体稳定性不足',desc:'架体高度、底部宽度和支撑措施没有形成足够稳定裕度，受侧向力时可能倾覆。',fix:'正确做法：按方案控制高度和高宽比，必要时设置外撑、连墙或其他防倾覆措施。'},
+        {id:12,x:73,y:89,r:5,title:'外撑/支腿未规范落地',desc:'支腿角度、落地点或防滑措施不到位，无法真正承担防倾覆作用。',fix:'正确做法：外撑应按规定角度展开，底部防滑、落地可靠，移动或调整后重新检查。'}
+      ]},
+      {id:'scaffold_use',name:'脚手架：使用过程',image:'assets/移动式门式脚手架_使用过程找茬_v0.1.png',alt:'移动式门式脚手架使用过程找茬场景',task:'任务：找出移动式门式脚手架使用过程中的 12 处不安全行为',sub:'重点看人在不在平台、能不能移动、是否攀爬外侧、有没有超载、坠物和隔离。',source:'判定口径参考：移动式门式脚手架使用过程安全要求、JGJ/T 128-2019 相关构造与使用要求，以及企业“移动时空载、无人、脚轮锁定、禁止攀爬外侧、禁止借架体支撑管线设备”的从严管理口径。当前为训练样品，正式教材前需结合客户标准和现场实物再校准。',issues:[
+        {id:1,x:68,y:12,r:6,title:'人员探出护栏外作业',desc:'人员身体越过护栏外侧去够管线，重心已经离开平台安全范围，存在坠落风险。',fix:'正确做法：人员应始终在护栏内作业，够不到就调整平台位置或换合适设备。'},
+        {id:2,x:37,y:16,r:6,title:'平台材料集中堆放',desc:'材料集中堆在平台上，既可能超过施工荷载，也会占用人员站位和通道。',fix:'正确做法：材料只保留本次作业所需数量，均匀放置，不得集中堆放或超载。'},
+        {id:3,x:56,y:25,r:5,title:'工具临边散放，存在坠物风险',desc:'工具和小件材料靠近平台边缘，人员碰撞后容易掉落伤人。',fix:'正确做法：工具放入工具包、工具箱或采取防坠措施，平台边缘不得散放物件。'},
+        {id:4,x:28,y:43,r:7,title:'攀爬架体外侧或交叉支撑',desc:'人员从外侧架体、斜撑攀爬，脚踩和手抓都不是设计攀登路径。',fix:'正确做法：只能使用专用爬梯或规定通道上下，不得攀爬门架外侧和剪刀撑。'},
+        {id:5,x:75,y:59,r:7,title:'平台有人时移动脚手架',desc:'架上有人仍推动脚手架，遇到地面不平、障碍物或急停时容易造成坠落。',fix:'正确做法：移动前人员全部下架，工具材料清走或固定，移动到位并锁轮后再上人作业。'},
+        {id:6,x:75,y:39,r:6,title:'借脚手架支撑管线或设施',desc:'把脚手架当作管线、设备或临时支撑，会引入额外水平力和不可控载荷。',fix:'正确做法：脚手架只作为作业平台使用，不得作为管线、设备、模板或其他设施支撑。'},
+        {id:7,x:62,y:25,r:5,title:'护栏开口或缺失',desc:'平台局部护栏不完整，人员转身、搬运或探身时容易从开口处坠落。',fix:'正确做法：平台周边护栏、中栏杆、挡脚板应完整；有开口必须封闭或停止使用。'},
+        {id:8,x:52,y:50,r:6,title:'剪刀撑被拆除或松脱',desc:'剪刀撑缺失会削弱架体整体稳定性，使用中架体可能摇晃、变形。',fix:'正确做法：使用期间不得拆除剪刀撑、加固杆、护栏等构件；缺失立即停用整改。'},
+        {id:9,x:51,y:91,r:5,title:'移动路径有积水湿滑',desc:'脚轮经过积水区域时摩擦力下降，可能打滑、偏移或突然卡住。',fix:'正确做法：移动和使用前清理路线，确认地面平整、坚实、无积水。'},
+        {id:10,x:70,y:83,r:5,title:'移动路径有障碍物',desc:'脚轮撞到障碍物会使架体急停或倾斜，架上人员和物料容易失稳。',fix:'正确做法：移动前清除地面障碍，安排人员观察路线，缓慢匀速移动。'},
+        {id:11,x:19,y:63,r:6,title:'下方未设置隔离区',desc:'作业下方有人通行或停留，一旦工具、材料坠落会造成打击伤害。',fix:'正确做法：作业影响范围设置警戒线或围挡，禁止无关人员进入。'},
+        {id:12,x:45,y:87,r:5,title:'脚轮制动未确认',desc:'脚轮没有全部锁定或锁定状态未确认，平台受力后可能滑移。',fix:'正确做法：到位后逐个锁定脚轮，确认脚轮有效制动后方可上人作业。'}
       ]}
     ];
     const stage=document.querySelector('#stage'),img=document.querySelector('#sceneImage'),tabs=document.querySelector('.tabs'),foundEl=document.querySelector('#found'),totalEl=document.querySelector('#total'),attemptsEl=document.querySelector('#attempts'),clockEl=document.querySelector('#clock'),progress=document.querySelector('#progress'),toast=document.querySelector('#toast'),dialog=document.querySelector('#answerDialog'),answers=document.querySelector('#answers'),feedback=document.querySelector('#feedbackCard');
@@ -96,7 +124,9 @@
     function renderTabs(){tabs.innerHTML=scenes.map(s=>`<button class="tab ${s.id===current.id?'active':''}" type="button" data-scene="${s.id}">${s.name}</button>`).join('');tabs.querySelectorAll('.tab').forEach(b=>b.onclick=()=>switchScene(b.dataset.scene))}
     function switchScene(id){clearInterval(timer);timerStarted=false;current=scenes.find(s=>s.id===id);hints=3;stage.querySelectorAll('.marker,.miss,.param-label').forEach(n=>n.remove());feedback.className='feedback-card';img.src=current.image;img.alt=current.alt;document.querySelector('#missionText').firstChild.nodeValue=current.task;document.querySelector('#missionSub').textContent=current.sub;document.querySelector('#hintBtn').textContent='给我一个区域提示（3）';renderTabs();renderParamLabels();current.issues.forEach(i=>{if(sceneState().found.has(i.id))addMarker(i)});update();say(`已切换：${current.name}`)}
     stage.addEventListener('click',e=>{startTimer();const rect=stage.getBoundingClientRect(),x=(e.clientX-rect.left)/rect.width*100,y=(e.clientY-rect.top)/rect.height*100,s=sceneState();s.attempts++;let hit=current.issues.map(i=>{const defect=Math.hypot((x-i.x)/1.777,y-i.y),label=Number.isFinite(i.lx)?Math.hypot((x-i.lx)/1.777,y-i.ly):defect;return {...i,d:Math.min(defect,label)}}).filter(i=>i.d<=i.r).sort((a,b)=>a.d-b.d)[0];if(hit&&hit.isError===false){explainCorrect(hit);say('这是正确参数，不计入错误得分','ok')}else if(hit){const isNew=!s.found.has(hit.id);s.found.add(hit.id);addMarker(hit);explain(hit);say(isNew?`找对了：${hit.title}`:`这个错误已经找到：${hit.title}`,'ok')}else{const m=document.createElement('span');m.className='miss';m.style.left=x+'%';m.style.top=y+'%';stage.append(m);setTimeout(()=>m.remove(),800);explainMiss();say('这里不是预设错误点','no')}update()});
-    function openAnswers(teacher){const s=sceneState(),total=wrongItems().length;if(!teacher&&s.attempts===0){say('请先观察并点击，再提交讲评');return}wrongItems().forEach(i=>addMarker(i,true));answers.innerHTML=current.issues.map(i=>`<article class="answer ${s.found.has(i.id)||i.isError===false?'found':''}"><span class="n">${i.id}</span><div><h3>${i.isError===false?'正确参数':'错误参数'}｜${i.title}${s.found.has(i.id)?' · 已找到':''}</h3><p>${i.desc}</p><p style="margin-top:5px;color:#0a6849;font-weight:750">${i.fix}</p></div></article>`).join('');document.querySelector('#dialogTitle').textContent=`统一讲评｜${current.name}`;document.querySelector('#dialogSub').textContent=current.sub;document.querySelector('#finalScore').textContent=`${s.found.size} / ${total}`;document.querySelector('#finalText').textContent=s.found.size>=total?'错误参数识别完成；再复盘正确参数为什么能成立。':s.found.size>=Math.ceil(total*0.6)?'基础判断不错；重点复盘漏掉的错误参数。':'先区分“停用参数”和“放行参数”，再练一次。';document.querySelector('#sourceText').textContent=current.source;dialog.showModal()}
+    function answerType(i){if(current.id==='structure')return i.isError===false?'正确参数':'错误参数';return '错误点'}
+    function finalAdvice(found,total){if(current.id==='structure'){return found>=total?'错误参数识别完成；再复盘正确参数为什么能成立。':found>=Math.ceil(total*0.6)?'基础判断不错；重点复盘漏掉的错误参数。':'先区分“停用参数”和“放行参数”，再练一次。'}return found>=total?'本场景错误点已全部找出；讲评时重点转成现场检查动作。':found>=Math.ceil(total*0.6)?'基础判断不错；继续复盘漏掉的高风险点。':'先按“人、设备、地面、区域隔离”四类重新观察。'}
+    function openAnswers(teacher){const s=sceneState(),total=wrongItems().length;if(!teacher&&s.attempts===0){say('请先观察并点击，再提交讲评');return}wrongItems().forEach(i=>addMarker(i,true));answers.innerHTML=current.issues.map(i=>`<article class="answer ${s.found.has(i.id)||i.isError===false?'found':''}"><span class="n">${i.id}</span><div><h3>${answerType(i)}｜${i.title}${s.found.has(i.id)?' · 已找到':''}</h3><p>${i.desc}</p><p style="margin-top:5px;color:#0a6849;font-weight:750">${i.fix}</p></div></article>`).join('');document.querySelector('#dialogTitle').textContent=`统一讲评｜${current.name}`;document.querySelector('#dialogSub').textContent=current.sub;document.querySelector('#finalScore').textContent=`${s.found.size} / ${total}`;document.querySelector('#finalText').textContent=finalAdvice(s.found.size,total);document.querySelector('#sourceText').textContent=current.source;dialog.showModal()}
     document.querySelector('#submitBtn').onclick=()=>openAnswers(false);document.querySelector('#teacherBtn').onclick=()=>openAnswers(true);document.querySelector('#closeDialog').onclick=()=>dialog.close();document.querySelector('#feedbackClose').onclick=()=>feedback.className='feedback-card';dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
     document.querySelector('#hintBtn').onclick=()=>{startTimer();if(!hints)return say('提示已用完');const unseen=wrongItems().filter(i=>!sceneState().found.has(i.id));if(!unseen.length)return say('已经全部找到了','ok');const i=unseen[Math.floor(Math.random()*unseen.length)];hints--;document.querySelector('#hintBtn').textContent=`给我一个区域提示（${hints}）`;const pulse=document.createElement('span');pulse.className='marker';pulse.style.left=(i.lx||i.x)+'%';pulse.style.top=(i.ly||i.y)+'%';pulse.style.background='transparent';pulse.style.borderColor='#ffd23f';pulse.style.boxShadow='0 0 0 7px #ffd23f66';pulse.style.animation='pop .3s ease,miss 1.8s .3s ease forwards';stage.append(pulse);setTimeout(()=>pulse.remove(),2100);say('黄色圈只提示区域，不算已找到')};
     document.querySelector('#resetBtn').onclick=()=>{clearInterval(timer);timerStarted=false;state[current.id]={found:new Set(),attempts:0,seconds:0};hints=3;feedback.className='feedback-card';stage.querySelectorAll('.marker,.miss').forEach(n=>n.remove());document.querySelector('#hintBtn').textContent='给我一个区域提示（3）';update();say('已重新开始本场景')};
